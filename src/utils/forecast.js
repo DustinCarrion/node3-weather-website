@@ -16,7 +16,7 @@ const forecast = (latitude, longitude, callback) => {
             const lowTemp = body.daily.data[0].temperatureLow;
             const precipProbability = Math.round(body.currently.precipProbability * 10000)/100;
             
-            const data = summary + ' It is currently ' + temperature + '°C out, the apparent temperature is ' + apparentTemperature + '°C. The maximum temparature is ' + highTemp + '°C and the minimum is ' + lowTemp + '°C. Additionally, there is a ' + precipProbability + '% chance of rain.';
+            const data = summary + ' It is currently ' + temperature + '°C out, the apparent temperature is ' + apparentTemperature + '°C. The maximum temparature of today is ' + highTemp + '°C and the minimum is ' + lowTemp + '°C. Additionally, there is a ' + precipProbability + '% chance of rain.';
             
             callback(undefined, data);
         }
